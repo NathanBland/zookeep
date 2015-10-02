@@ -15,18 +15,36 @@ main
       //align-items: flex-start
       //align-content: flex-start
       section
-        display: flex
         flex-direction: column
         position: relative
         flex: 0 1 auto
-        img
-          margin-left: auto
-          margin-right: auto
+        div
           width: 25vw
+          max-height: 25vh
+          overflow: hidden
+          box-shadow: 0 0 5px black
+          transition: all 300ms
+          img
+            display: block
+            max-width: 100%
+            max-height: auto
+          &:hover
+            overflow: visible
+            z-index: 2
+            box-shadow: 0 0 10px black
+            max-height: 100%
+          &:hover + ul
+            opacity: 1
+            pointer-events: auto
+
+
         ul
+          pointer-events: none
+          opacity: 0
           list-style: none
           padding: 0
           margin: 0
+          z-index: 1
           li
             span
               font-weight: bold
