@@ -10,10 +10,11 @@ main
       display: flex
       flex-direction: row
       flex-wrap: wrap
-      //justify-content: space-around
+      //justify-content: space-between
       justify-content: flex-start
-      //align-items: flex-start
-      //align-content: flex-start
+      //padding-left: 10em
+      //align-content: center
+      //align-items: center
       section
         display: flex
         justify-content: center
@@ -28,16 +29,14 @@ main
           display: flex
           justify-content: center
           align-items: center
-          transition: all 500ms ease-in-out
-          z-index: 1
           img
             display: block
             max-width: 95%
             max-height: 22vh
             box-shadow: 0 0 5px black
+            transition: all 200ms cubic-bezier(.42,0,.78,2.69) 0s
           &:hover
             img
-              z-index: 2
               box-shadow: 0 0 10px black
             //max-height: 100%
           &:hover + ul
