@@ -7,7 +7,7 @@ var fs = require('fs')
 var rr = require('readline').createInterface({
   input: fs.createReadStream('data.txt')
 })
-var file = fs.createWriteStream('data.js')
+var file = fs.createWriteStream('gh-pages/data/data.json')
 var keys = ['Name', 'Common Name', 'Species', 'Location', 'Age', 'Image']
 // file.write('exports.animals')
 var data = []
@@ -27,7 +27,7 @@ rr.on('line', function (line) {
 rr.on('close', function () {
   // console.log(data)
   // file.write('exports.animals = ')
-  var str = 'exports.animals = ['
+  var str = '['
   data.forEach(function (element, index, array) {
     var line = JSON.stringify(element)
     str += line
